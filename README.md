@@ -12,42 +12,6 @@ This project implements a search engine for Vietnamese legal documents with a co
 - Compare retrieval results between dense and sparse approaches
 - Analyze the strengths and weaknesses of each method
 
-## Directory Structure
-
-```
-search_engine_law/
-│
-├── search_engine_model/
-│   ├── main.py
-│   └── two_model/
-│       ├── dense/
-│       │   ├── model.py
-│       │   └── inference.py
-│       └── sparse_BM25/
-│           ├── bm25.py
-│           └── inference.py
-│
-├── search_engine_law_data/
-│   ├── crawl_law.ipynb
-│   ├── crawl_law_luatVN.ipynb
-│   ├── preprocessing_data.ipynb
-│   ├── Text Processing.txt
-│   ├── laws_luatVN.json
-│   ├── clean_luatVN_chunk.json
-│   ├── laws_luatVN_chunk.json
-│   ├── data_luat_chunked.json
-│   ├── queries.txt
-│   ├── query.ipynb
-│   ├── real_query.ipynb
-│   ├── query_merged.json
-│   ├── query_fix.json
-│   ├── query_relevance_dataset.json
-│   ├── index.ipynb
-│   └── png.ipynb
-│
-└── README.md
-```
-
 ## Methodology
 
 ### 1. Data Crawling
@@ -102,3 +66,4 @@ The main.py file serves as the single entry point for running retrieval experime
 - API or web-based demo interface for interactive searching
 - Support for additional Vietnamese legal document sources
 - Query expansion and refinement techniques
+
