@@ -1,0 +1,26 @@
+Text Processing:
+- Tokenizing (tách từ):
+    - Mục tiêu: chuyển content (văn bản mỗi chunk) thành danh sách từ chuẩn hoá.
+    - Chuẩn hoá trước khi tách: lowercase, chuẩn Unicode, chuẩn hoá khoảng trắng; giữ chữ & số, bỏ dấu câu rời rạc.
+    - Quy tắc tách: regex đơn giản loại các dấu thừa, các kí tự lạ như là /n 
+-> Đầu ra: tokens (dạng hiển thị).
+
+N-gram:
+-thống kê data gốc là các chunk thành 1 table theo từng N-gram(1-gram, 2-gram, 3-gram) 
+->hiển thị các table  ra
+
+zipf's law: 
+-phân tích phân bố tần suất của các từ trong data  được tokenize 
+-áp dụng riêng cho từng n-gram (đặc biệt là unigram).
+-tính ra α, K, R^2 
+->Fit line biểu diễn độ khớp giữa dữ liệu thực và mô hình Zipf
+
+Stopping (loại stopwords):
+    - Mục tiêu: bỏ các từ chức năng ít thông tin (the, a, of, …) để giảm nhiễu.
+    - dựa vào table thống kê của unigram 
+    - Cách làm: loại theo từ khoá; có thể không xoá khi chúng nằm giữa cụm thuật ngữ (ví dụ trong phrases), nhưng nên xoá ở giai đoạn từ đơn.
+-> Đầu ra: tokens_clean (tokens sau khi stop).
+
+tính heap:
+-Mục tiêu: đánh giá độ phong phú của vốn từ khi kích thước dữ liệu tăng.
+-> giá trị 𝛽, 𝐾, 𝑅^2 và biểu đồ log-log thể hiện mức độ “đủ dữ liệu” của corpus.
